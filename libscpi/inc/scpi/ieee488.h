@@ -58,6 +58,21 @@ extern "C" {
     scpi_result_t SCPI_CoreTstQ(scpi_t * context);
     scpi_result_t SCPI_CoreWai(scpi_t * context);
 
+#define SCPI_CMD_LIST_IEEE \
+    SCPI_CMD("*CLS", SCPI_CoreCls), \
+    SCPI_CMD("*ESE", SCPI_CoreEse), \
+    SCPI_CMD("*ESE?", SCPI_CoreEseQ), \
+    SCPI_CMD("*ESR?", SCPI_CoreEsrQ), \
+    SCPI_CMD("*IDN?", SCPI_CoreIdnQ), \
+    SCPI_CMD("*OPC", SCPI_CoreOpc), \
+    SCPI_CMD("*OPC?", SCPI_CoreOpcQ), \
+    SCPI_CMD("*RST", SCPI_CoreRst), \
+    SCPI_CMD("*SRE", SCPI_CoreSre), \
+    SCPI_CMD("*SRE?", SCPI_CoreSreQ), \
+    SCPI_CMD("*STB?", SCPI_CoreStbQ), \
+    SCPI_CMD("*TST?", SCPI_CoreTstQ), \
+    SCPI_CMD("*WAI", SCPI_CoreWai)
+
 
 #define STB_R01 0x01    /* Not used */
 #define STB_PRO 0x02    /* Protection Event Flag */

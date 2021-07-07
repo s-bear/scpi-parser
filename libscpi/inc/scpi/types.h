@@ -116,8 +116,10 @@ extern "C" {
 
 #if USE_COMMAND_TAGS
 	#define SCPI_CMD_LIST_END       {NULL, NULL, 0}
+    #define SCPI_CMD(pattern_, callback_) {.pattern=(pattern_), .callback=(callback_), .tag=0}
 #else
 	#define SCPI_CMD_LIST_END       {NULL, NULL}
+    #define SCPI_CMD(pattern_, callback_) {.pattern=(pattern_), .callback=(callback_)}
 #endif
 
 

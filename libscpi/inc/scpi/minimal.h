@@ -60,6 +60,19 @@ extern "C" {
     scpi_result_t SCPI_StatusOperationEnable(scpi_t * context);
     scpi_result_t SCPI_StatusPreset(scpi_t * context);
 
+#define SCPI_CMD_LIST_MINIMAL \
+    SCPI_CMD("SYSTem:VERSion?", SCPI_SystemVersionQ), \
+        SCPI_CMD("SYSTem:ERRor[:NEXT]?", SCPI_SystemErrorNextQ), \
+        SCPI_CMD("SYSTem:ERRor:COUNt?", SCPI_SystemErrorCountQ), \
+        SCPI_CMD("STATus:QUEStionable[:EVENt]?", SCPI_StatusQuestionableEventQ), \
+        SCPI_CMD("STATus:QUEStionable:CONDition?", SCPI_StatusQuestionableConditionQ), \
+        SCPI_CMD("STATus:QUEStionable:ENABle?", SCPI_StatusQuestionableEnableQ), \
+        SCPI_CMD("STATus:QUEStionable:ENABle", SCPI_StatusQuestionableEnable), \
+        SCPI_CMD("STATus:OPERation:CONDition", SCPI_StatusOperationConditionQ), \
+        SCPI_CMD("STATus:OPERation[:EVENt]?", SCPI_StatusOperationEventQ), \
+        SCPI_CMD("STATus:OPERation:ENABle?", SCPI_StatusOperationEnableQ), \
+        SCPI_CMD("STATus:OPERation:ENABle", SCPI_StatusOperationEnable), \
+        SCPI_CMD("STATus:PRESet", SCPI_StatusPreset)
 
 #ifdef	__cplusplus
 }
