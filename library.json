@@ -1,0 +1,35 @@
+{
+    "name": "scpi-parser",
+    "version": "",
+    "description": "SCPI Parser library aims to provide parsing ability of SCPI commands on instrument side.",
+    "keywords": ["scpi", "parser", "command", "control", "instrument", "ieee-488"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/s-bear/scpi-parser"
+    },
+    "authors": [
+        {
+            "name": "Jan Breuer",
+            "email": "github@jaybee.cz",
+            "url": "https://www.jaybee.cz/",
+            "maintainer": true
+        }
+    ],
+    "license": "BSD-2-Clause",
+    "homepage": "https://www.jaybee.cz/scpi-parser/",
+    "framewords": "*",
+    "platforms": "*",
+    "dependencies": {},
+    "examples": [
+        {
+            "name": "Interactive",
+            "base": "examples/test-interactive",
+            "files": ["main.c", "../common/scpi-def.c", "../common/scpi-def.h", "Makefile"]
+        }
+    ],
+    "build": {
+        "flags": ["-lm"],
+        "includeDir": "libscpi/inc",
+        "srcDir": "libscpi/src"
+    }
+}
