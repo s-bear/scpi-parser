@@ -5,7 +5,8 @@
     "keywords": ["scpi", "parser", "command", "control", "instrument", "ieee-488"],
     "repository": {
         "type": "git",
-        "url": "https://github.com/s-bear/scpi-parser"
+        "url": "https://github.com/s-bear/scpi-parser",
+        "branch": "platformio-compat"
     },
     "authors": [
         {
